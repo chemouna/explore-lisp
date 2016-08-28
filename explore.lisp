@@ -44,9 +44,18 @@
 
 ;; do
 
+;; (do (variable-definitions*)
+;;     (end-test-form result-form*)
+;;  statement*)
+
 (do ((temp-one 1 (1+ temp-one))
      (temp-two 0 (1- temp-two)))
     ((> (- temp-one temp-two) 5) temp-one))
+
+(do ((n 0 (1+ n))
+     (cur 0 next)
+     (next 1 (+ cur next)))
+    ((= 10 n) cur))
 
 ;; plusp
 (minusp -1)
